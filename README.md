@@ -1,6 +1,6 @@
 # SQL
-## SQL is a Standard Language.
-## SQL stands for Stuctured Query Language.
-## It is based on English Language.
-## It is used for storing and managing data in Relational Database Management System (RDBMS).
-## SQL was earlier known as SEQUAL.
+<BR> 1. SQL is a Standard Language.
+ 2. SQL stands for Stuctured Query Language.
+ 3. It is based on English Language.
+ 4. It is used for storing and managing data in Relational Database Management System (RDBMS).
+ 5. SQL was earlier known as SEQUAL.<BR>
