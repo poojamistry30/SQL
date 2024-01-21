@@ -1,0 +1,23 @@
+CREATE SCHEMA Self;
+
+CREATE TABLE Self.Employee(EmpID INT, EmployeeName VARCHAR(100), ManagerID INT, Salary INT);
+
+INSERT INTO Self.Employee VALUES
+(1,'Sunil',NULL,500000),
+(2,'Anil',1,40000),
+(3,'Ram',1,600000),
+(4,'Shyam',2,8000),
+(5,'Shruti',4,300000);
+
+SELECT * FROM Self.Employee;
+
+--Q Write a query to display the Employees with their Manager
+SELECT Emp.EmployeeName AS Employee, Mangr.EmployeeName AS Manager
+FROM Self.Employee Emp LEFT JOIN Self.Employee Mangr
+ON Emp.ManagerID=Mangr.EmpID;
+
+--Q Write a query to display to find the employees whose salary is more than thier manager
+SELECT Emp.EmployeeName AS Employee, Mangr.EmployeeName AS Manager
+FROM Self.Employee Emp LEFT JOIN Self.Employee Mangr
+ON Emp.ManagerID=Mangr.EmpID
+WHERE Emp.Salary>Mangr.Salary;
