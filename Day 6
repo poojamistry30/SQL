@@ -21,3 +21,23 @@ SELECT Emp.EmployeeName AS Employee, Mangr.EmployeeName AS Manager
 FROM Self.Employee Emp LEFT JOIN Self.Employee Mangr
 ON Emp.ManagerID=Mangr.EmpID
 WHERE Emp.Salary>Mangr.Salary;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE Product(ProductID INT, ProductName VARCHAR(100), CategoryID INT);
+
+INSERT INTO Product VALUES
+(1,'TV',NULL),
+(2,'Samsung 50 Inch',1),
+(3,'Sony 55 Inch',1),
+(4,'Iphone',NULL),
+(5,'Iphone4 Pro',4),
+(6,'Iphone14',4);
+
+SELECT * FROM Product;
+
+--Q Write a query to display all product with their category
+
+SELECT P.ProductName AS Product, C.ProductName AS Category
+FROM Product P LEFT JOIN Product C
+ON P.ProductID=C.CategoryID;
